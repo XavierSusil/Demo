@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.GreetingRecord;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -7,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingController {
 
     @GetMapping("/greet")
-    public  String Greet() {
-        return "Hello, World!";
+    public  GreetingRecord Greet() {
+
+        return new GreetingRecord("Hello , World",1);
     }
 }
